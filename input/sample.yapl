@@ -1,0 +1,13 @@
+class Main {
+  variable0: Int;
+  variable1: IO <- new IO;
+  variable2: String;
+  main(): Object {
+    {
+      variable0 <- 1;
+      variable1.out_string("Hola mundo").out_string("\n");
+      variable2 <- variable1.in_string();
+      variable1.out_string("\n").out_string("Input: ").out_string(variable2);
+    }
+  };
+};

@@ -1,0 +1,62 @@
+class Mathematics {
+  
+  add(a: Int, b: Int) : Int {
+    {(
+      let result : Int in
+      result <- a + b
+    );}
+  };
+  
+  subtract(a: Int, b: Int) : Int {
+    {(
+      let result : Int in
+      result <- a - b
+    );}
+  };
+  
+  multiply(a: Int, b: Int) : Int {
+    {(
+      let result : Int in
+      result <- a * b
+    );}
+  };
+  
+  divide(a: Int, b: Int) : Int {
+    {(
+      let result : Int in
+      if b = 0 then 
+        result <- 0
+      else 
+        result <- a / b
+      fi
+    );}
+  };
+};
+
+class Main {
+    math: Mathematics;
+    a: Int <- 10;
+    b: Int <- 5;
+    resultAdd: Int;
+    resultSubtract: Int;
+    resultMultiply: Int;
+    resultDivide: Int;
+
+    main() : SELF_TYPE {
+    {
+        math <- new Mathematics;
+        
+        resultAdd <- math.add(a, b);
+        out_int(resultAdd);
+        
+        resultSubtract <- math.subtract(a, b);
+        out_int(resultSubtract);
+        
+        resultMultiply <- math.multiply(a, b);
+        out_int(resultMultiply);
+        
+        resultDivide <- math.divide(a, b);
+        out_int(resultDivide);
+    }
+    };
+};
